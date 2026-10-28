@@ -591,3 +591,13 @@ a.dr-item{text-decoration:none;color:inherit}
 /* motion preferences */
 :root[data-motion="reduced"] *{animation:none!important;transition:none!important}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.ord-cap b{color:#386660;letter-spacing:.08em;margin-left:6px}
+.ord-how{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:4px;line-height:1.45;opacity:.92}
+.ord-how b{color:var(--oh);font-weight:600}
+button.ord-dm{border:0;cursor:pointer}
+.dialog.ficha-dlg{width:min(520px,100%)}
+.ficha{gap:14px}
+.ficha-img{display:grid;place-items:center;min-height:260px;border-radius:14px;background:var(--panel-2)}
+.ficha-img img{display:block;width:100%;max-height:min(58vh,560px);object-fit:contain;border-radius:12px}
+.ficha-steps{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:6px;line-height:1.45}
+a.btn{text-decoration:none}

@@ -26,6 +26,7 @@ const meta = `<meta charset="utf-8">
 <meta name="description" content="Diseñá libretas digitales para soltar tu creatividad y armá tu Delulu Journal de cuero, hecho a mano en Guatemala.">
 <meta name="theme-color" content="#386660">
 <meta property="og:title" content="Delulu Journal">
+<meta property="og:url" content="https://delulusjournal.vercel.app/">
 <meta property="og:description" content="Soñá. Planeá. Repetí. Libretas digitales y libretas de cuero hechas a mano.">
 <link rel="icon" href="${icon}">`;
 const html = `<!doctype html>\n<html lang="es">\n<head>\n${meta}\n${read('src/head.html').trim()}\n<style>${css}</style>\n</head>\n<body>\n${read('src/body.html').trim()}\n<script>${js}</script>\n</body>\n</html>\n`;
