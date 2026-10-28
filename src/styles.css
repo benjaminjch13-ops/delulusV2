@@ -601,3 +601,7 @@ button.ord-dm{border:0;cursor:pointer}
 .ficha-img img{display:block;width:100%;max-height:min(58vh,560px);object-fit:contain;border-radius:12px}
 .ficha-steps{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:6px;line-height:1.45}
 a.btn{text-decoration:none}
+.ord-dm .i{width:20px;height:20px;margin-right:10px}
+.ord-dm:disabled{opacity:.7;cursor:progress}
+.ord-dm2{align-self:center;color:var(--ot);font:700 14px var(--f-body);letter-spacing:.16em;text-decoration:none;border-bottom:2px solid var(--oh);padding:2px 2px 4px}
+.ord-dm2:hover{color:var(--oh)}

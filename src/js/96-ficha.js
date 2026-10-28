@@ -26,7 +26,7 @@ async function renderFicha(){await fichaFonts();const code=orderCode(),a=orderAg
   const kx=540,ky=top,kw=448,kh=640;ctx.save();ctx.shadowColor='rgba(0,0,0,.35)';ctx.shadowBlur=30;ctx.shadowOffsetY=14;ctx.fillStyle=CR;rr(ctx,kx,ky,kw,kh,22);ctx.fill();ctx.restore();
   ctx.textAlign='left';ctx.fillStyle=WI;ctx.font=`700 18px ${sans}`;ctx.letterSpacing='5px';ctx.fillText('TU DELULU',kx+34,ky+52);ctx.letterSpacing='0px';
   const sw={1:null,2:dlPick(DL_LEATHERS,ORD.leather)[2],3:dlPick(DL_ELASTICS,ORD.elastic)[2]},rowH=(kh-90)/rows.length;
-  const charmImg=ORD.charm!=='none'?await loadImg(svgURL(charmSVG({shape:ORD.charm,material:'oro',color:'#c4878c',letter:(ORD.initials||'D')[0].toUpperCase()},120))):null;
+  const charmImg=ORD.charm!=='none'?await loadImg(svgURL(charmSVG({shape:ORD.charm,material:'oro',color:'#c4878c',letter:'D'},120))):null;
   for(let i=0;i<rows.length;i++){const[k,v,stp]=rows[i],y=ky+80+i*rowH;
     if(i){ctx.save();ctx.strokeStyle='rgba(34,64,59,.18)';ctx.setLineDash([6,6]);ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(kx+34,y);ctx.lineTo(kx+kw-34,y);ctx.stroke();ctx.restore()}
     ctx.fillStyle=WI;ctx.font=`700 15px ${sans}`;ctx.letterSpacing='3px';ctx.fillText(k.toUpperCase(),kx+34,y+36);ctx.letterSpacing='0px';
@@ -42,6 +42,7 @@ async function renderFicha(){await fichaFonts();const code=orderCode(),a=orderAg
   ctx.fillStyle=CR;ctx.globalAlpha=.75;ctx.font=`600 20px ${sans}`;ctx.fillText(BRAND.site.replace('https://',''),FICHA_W/2,1266);ctx.globalAlpha=1;
   return c}
 const fichaBlob=c=>new Promise(r=>c.toBlob(r,'image/png'));
+async function saveFicha(){const blob=await fichaBlob(await renderFicha());return offerFile(`ficha-${orderCode()}.png`,blob)}
 async function openFicha(){const txt=orderText(),name=`ficha-${orderCode()}.png`;
   const m=modal(`<header><h2>Tu ficha técnica</h2><div class="spacer"></div><button class="btn ghost icon" data-x aria-label="Cerrar">${ico('x')}</button></header>
    <div class="content one ficha"><div class="ficha-img"><span class="hint">Armando tu ficha…</span></div>
