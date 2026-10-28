@@ -1,4 +1,6 @@
-# Delulu Journal ✦
+# Delulu Journal V2 ✦
+
+Versión completa: editor de libretas digitales + pedidos de libretas de cuero. La tienda publicada (solo pedidos) vive en el repositorio `delulusjournal`.
 
 Soñá. Planeá. Repetí.
 
